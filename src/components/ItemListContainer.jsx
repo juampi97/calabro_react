@@ -7,8 +7,10 @@ const ItemListContainer = ({ greeting }) => {
       <div>
         <h3 className="text-center pt-3">{greeting}</h3>
       </div>
-      <div className="">
-        <ItemCount />
+      <div className="container'fluid">
+        <div className="col-6">
+          <ItemCount />
+        </div>
       </div>
     </>
   );
