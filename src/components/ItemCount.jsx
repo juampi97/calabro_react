@@ -1,11 +1,43 @@
 import React from "react";
 
-const ItemCount = () => {
+// Import hook
+import { useState } from "react";
+
+// Import components bootstrap
+import Button from "react-bootstrap/Button";
+
+const ItemCount = ({ stock }) => {
+  const cantidadInicial = 1;
+  const [cantidad, setCantidad] = useState(cantidadInicial);
+
+  const aumentarCantidad = () => {
+    if (cantidad < stock) {
+      setCantidad(cantidad + 1);
+    }
+  };
+  const disminuirCantidad = () => {
+    if (cantidad > cantidadInicial) {
+      setCantidad(cantidad - 1);
+    }
+  };
+
   return (
     <>
-      <div className="col-3 d-flex justify-content-around">-</div>
-      <div className="col-6 d-flex justify-content-around">0</div>
-      <div className="col-3 d-flex justify-content-around">+</div>
+      <Button
+        variant="outline-light"
+        className="text-dark fw-bold"
+        onClick={disminuirCantidad}
+      >
+        -
+      </Button>
+      <div className="col-6 d-flex justify-content-around">{ cantidad }</div>
+      <Button
+        variant="outline-light"
+        className="text-dark fw-bold"
+        onClick={aumentarCantidad}
+      >
+        +
+      </Button>
     </>
   );
 };
