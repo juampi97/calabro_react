@@ -7,9 +7,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import NavBar from "./components/NavBar";
 import ItemListContainer from "./components/ItemListContainer";
 
-// Import css
-import './styles.css'
-
 const App = () => {
 
   return (

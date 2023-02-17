@@ -28,7 +28,7 @@ const ItemCount = ({ stock }) => {
         className="d-flex align-items-center justify-content-around text-dark"
         onClick={onRestar}
       >
-        <span class="material-symbols-outlined">horizontal_rule</span>
+        <span className="material-symbols-outlined">horizontal_rule</span>
       </Button>
       <div className="col-6 d-flex justify-content-around">{cantidad}</div>
       <Button
@@ -36,7 +36,7 @@ const ItemCount = ({ stock }) => {
         className="d-flex align-items-center justify-content-around text-dark"
         onClick={onAdd}
       >
-        <span class="material-symbols-outlined">add</span>
+        <span className="material-symbols-outlined">add</span>
       </Button>
     </>
   );

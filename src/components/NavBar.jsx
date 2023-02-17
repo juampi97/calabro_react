@@ -27,7 +27,13 @@ function NavBar() {
                 Inicio
               </Nav.Link>
               <Nav.Link className="text-dark" href="#link">
-                Productos
+                Proyectores
+              </Nav.Link>
+              <Nav.Link className="text-dark" href="#link">
+                Notebooks
+              </Nav.Link>
+              <Nav.Link className="text-dark" href="#link">
+                Instrumentos
               </Nav.Link>
             </Nav>
           <CartWidget />
