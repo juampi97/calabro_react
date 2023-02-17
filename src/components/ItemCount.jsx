@@ -10,12 +10,12 @@ const ItemCount = ({ stock }) => {
   const cantidadInicial = 1;
   const [cantidad, setCantidad] = useState(cantidadInicial);
 
-  const aumentarCantidad = () => {
+  const onAdd = () => {
     if (cantidad < stock) {
       setCantidad(cantidad + 1);
     }
   };
-  const disminuirCantidad = () => {
+  const onRestar = () => {
     if (cantidad > cantidadInicial) {
       setCantidad(cantidad - 1);
     }
@@ -26,7 +26,7 @@ const ItemCount = ({ stock }) => {
       <Button
         variant="outline-light"
         className="text-dark fw-bold"
-        onClick={disminuirCantidad}
+        onClick={onRestar}
       >
         -
       </Button>
@@ -34,7 +34,7 @@ const ItemCount = ({ stock }) => {
       <Button
         variant="outline-light"
         className="text-dark fw-bold"
-        onClick={aumentarCantidad}
+        onClick={onAdd}
       >
         +
       </Button>

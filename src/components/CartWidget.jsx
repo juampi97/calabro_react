@@ -7,9 +7,9 @@ import Button from "react-bootstrap/Button";
 const CartWidget = () => {
   return (
     <>
-      <Button className="ms-2" variant="warning">
-        <span className="material-symbols-outlined">shopping_cart</span>
-        <Badge bg="danger">
+      <Button className="d-flex align-items-center justify-content-around ms-2 " variant="success">
+        <span className="material-symbols-outlined me-1">shopping_cart</span>
+        <Badge bg="warning">
           3
         </Badge>
         <span className="visually-hidden">Productos carrito</span>
