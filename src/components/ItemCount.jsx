@@ -11,14 +11,10 @@ const ItemCount = ({ stock }) => {
   const [cantidad, setCantidad] = useState(cantidadInicial);
 
   const onAdd = () => {
-    if (cantidad < stock) {
-      setCantidad(cantidad + 1);
-    }
+    cantidad < stock ? setCantidad(cantidad + 1) : setCantidad(cantidad);
   };
   const onRestar = () => {
-    if (cantidad > cantidadInicial) {
-      setCantidad(cantidad - 1);
-    }
+    cantidad > cantidadInicial ? setCantidad(cantidad - 1) : setCantidad(cantidad);
   };
 
   return (
