@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Produto A",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "stock": 10
+  },
+  {
+    "id": 2,
+    "name": "Produto B",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "stock": 5
+  },
+  {
+    "id": 3,
+    "name": "Produto C",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "stock": 20
+  }
+]
