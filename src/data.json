@@ -1,20 +1,172 @@
 [
-  {
-    "id": 1,
-    "name": "Produto A",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "stock": 10
-  },
-  {
-    "id": 2,
-    "name": "Produto B",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "stock": 5
-  },
-  {
-    "id": 3,
-    "name": "Produto C",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "stock": 20
-  }
-]
+    {
+      "cod_rec": "OPTOMA",
+      "categoria": "PROYECTOR",
+      "marca": "OPTOMA",
+      "modelo": "BR331",
+      "sn": "Q8WQ402AAAAAC1061",
+      "vga": 1,
+      "hdmi": 1,
+      "stock": 50
+    },
+    {
+      "cod_rec": "VIEW2",
+      "categoria": "PROYECTOR",
+      "marca": "VIEWSONIC",
+      "modelo": "VS12472 (PJD6221)",
+      "sn": "R8K113406795",
+      "vga": 1,
+      "hdmi": 0,
+      "stock": 50
+    },
+    {
+      "cod_rec": "VIEW5",
+      "categoria": "PROYECTOR",
+      "marca": "VIEWSONIC",
+      "modelo": "VS15876 (PJD5555W)",
+      "sn": "UET165001213",
+      "vga": 1,
+      "hdmi": 1,
+      "stock": 50
+    },
+    {
+      "cod_rec": "VIEW6",
+      "categoria": "PROYECTOR",
+      "marca": "VIEWSONIC",
+      "modelo": "PX701HD",
+      "sn": "VPS241701800",
+      "vga": 1,
+      "hdmi": 1,
+      "stock": 50
+    },
+    {
+      "cod_rec": "VIEW7",
+      "categoria": "PROYECTOR",
+      "marca": "VIEWSONIC",
+      "modelo": "PX701HD",
+      "sn": "VPS241701783",
+      "vga": 1,
+      "hdmi": 1,
+      "stock": 50
+    },
+    {
+      "cod_rec": "VIEW8",
+      "categoria": "PROYECTOR",
+      "marca": "VIEWSONIC",
+      "modelo": "PX701HD",
+      "sn": "VPS241701796",
+      "vga": 1,
+      "hdmi": 1,
+      "stock": 50
+    },
+    {
+      "cod_rec": "VIEW9",
+      "categoria": "PROYECTOR",
+      "marca": "VIEWSONIC",
+      "modelo": "PX701HD",
+      "sn": "VPS241701771",
+      "vga": 1,
+      "hdmi": 1,
+      "stock": 50
+    },
+    {
+      "cod_rec": "VIEW10",
+      "categoria": "PROYECTOR",
+      "marca": "VIEWSONIC",
+      "modelo": "PX701HD",
+      "sn": "VPS241701779",
+      "vga": 1,
+      "hdmi": 1,
+      "stock": 50
+    },
+    {
+      "cod_rec": "BENQ2",
+      "categoria": "PROYECTOR",
+      "marca": "BENQ",
+      "modelo": "MX631ST",
+      "sn": "PDE7G02941000",
+      "vga": 1,
+      "hdmi": 1,
+      "stock": 50
+    },
+    {
+      "cod_rec": "BENQ3",
+      "categoria": "PROYECTOR",
+      "marca": "BENQ",
+      "modelo": "MS619ST",
+      "sn": "PDK4E01092000",
+      "vga": 1,
+      "hdmi": 1,
+      "stock": 50
+    },
+    {
+        "cod_rec": "HP1",
+        "categoria": "NOTEBOOK",
+        "marca": "HP",
+        "modelo": "NX3325",
+        "sn": "-",
+        "vga": 1,
+        "hdmi": 0,
+        "stock": 50
+       },
+       {
+        "cod_rec": "LENOVO4",
+        "categoria": "NOTEBOOK",
+        "marca": "LENOVO",
+        "modelo": "G485_20136",
+        "sn": "MB00267674",
+        "vga": 1,
+        "hdmi": 0,
+        "stock": 50
+       },
+       {
+        "cod_rec": "LENOVO3",
+        "categoria": "NOTEBOOK",
+        "marca": "LENOVO",
+        "modelo": "G485_20136",
+        "sn": "MB00267725",
+        "vga": 1,
+        "hdmi": 0,
+        "stock": 50
+       },
+       {
+        "cod_rec": "LENOVO1",
+        "categoria": "NOTEBOOK",
+        "marca": "LENOVO",
+        "modelo": "G485_20136",
+        "sn": "MB00267723",
+        "vga": 1,
+        "hdmi": 0,
+        "stock": 50
+       },
+       {
+        "cod_rec": "LENOVO2",
+        "categoria": "NOTEBOOK",
+        "marca": "LENOVO",
+        "modelo": "G485_20136",
+        "sn": "MB00264152",
+        "vga": 1,
+        "hdmi": 0,
+        "stock": 50
+       },
+       {
+        "cod_rec": "CX2",
+        "categoria": "NOTEBOOK",
+        "marca": "CX",
+        "modelo": "CX224xx",
+        "sn": "-",
+        "vga": 0,
+        "hdmi": 1,
+        "stock": 50
+       },
+       {
+        "cod_rec": "CX1",
+        "categoria": "NOTEBOOK",
+        "marca": "CX",
+        "modelo": "CX224xx",
+        "sn": "-",
+        "vga": 0,
+        "hdmi": 1,
+        "stock": 50
+       }
+  ]
