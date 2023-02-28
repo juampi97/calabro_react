@@ -36,11 +36,11 @@ const ItemListContainer = ({ greeting }) => {
   const [productos, setProductos] = useState([]);
 
   useEffect(() => {
-  getData().then((data) => setProductos(data));
-  getData().catch((error) => console.log(error));
-  },[]);
+    getData().then((data) => setProductos(data));
+    getData().catch((error) => console.log(error));
+  }, []);
 
-  return <>{ <ItemList productos={productos} /> }</>;
+  return <>{<ItemList productos={productos} />}</>;
 };
 
 export default ItemListContainer;
