@@ -1,11 +1,8 @@
 import React from "react";
 
-<<<<<<< HEAD
-=======
 // Import react-router-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
->>>>>>> work_mod
 // Import Bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -17,13 +14,6 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import Cart from "./components/Cart";
 
 const App = () => {
-<<<<<<< HEAD
-
-  return (
-    <>
-      <NavBar />
-      <ItemListContainer greeting={"Bienvenidos a UNLaM - ecomerce"} />
-=======
   return (
     <>
       <BrowserRouter>
@@ -37,7 +27,6 @@ const App = () => {
           <Route exact path="/carrito" element={<Cart />} />
         </Routes>
       </BrowserRouter>
->>>>>>> work_mod
     </>
   );
 };
