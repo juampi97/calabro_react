@@ -24,20 +24,6 @@ function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-<<<<<<< HEAD
-              <Nav.Link className="text-dark" href="#home">
-                Inicio
-              </Nav.Link>
-              <Nav.Link className="text-dark" href="#link">
-                Proyectores
-              </Nav.Link>
-              <Nav.Link className="text-dark" href="#link">
-                Notebooks
-              </Nav.Link>
-              <Nav.Link className="text-dark" href="#link">
-                Instrumentos
-              </Nav.Link>
-=======
               <Link to={"/"}>
                 <Nav.Item className="nav_text">Inicio</Nav.Item>
               </Link>
@@ -58,7 +44,6 @@ function NavBar() {
                   <Link to={"/categoria/notebook"}>Notebooks</Link>
                 </Nav.Item>
               </NavDropdown>
->>>>>>> work_mod
             </Nav>
             <CartWidget />
           </Navbar.Collapse>
