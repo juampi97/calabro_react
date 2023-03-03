@@ -1,4 +1,18 @@
+a{
+color: black !important;
+padding: 0 !important;
+text-decoration: none !important;
+}
+
 .navbar_logo {
     width: 50px;
     height: 50px;
+}
+
+.nav_text{
+    padding: 0 5px !important;
+}
+
+.nav_text_drop {
+    padding: 5px 0 !important;
 }

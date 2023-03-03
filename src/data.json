@@ -1,7 +1,7 @@
 [
     {
       "cod_rec": "OPTOMA",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "OPTOMA",
       "modelo": "BR331",
       "sn": "Q8WQ402AAAAAC1061",
@@ -11,7 +11,7 @@
     },
     {
       "cod_rec": "VIEW2",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "VIEWSONIC",
       "modelo": "VS12472 (PJD6221)",
       "sn": "R8K113406795",
@@ -21,7 +21,7 @@
     },
     {
       "cod_rec": "VIEW5",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "VIEWSONIC",
       "modelo": "VS15876 (PJD5555W)",
       "sn": "UET165001213",
@@ -31,7 +31,7 @@
     },
     {
       "cod_rec": "VIEW6",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "VIEWSONIC",
       "modelo": "PX701HD",
       "sn": "VPS241701800",
@@ -41,7 +41,7 @@
     },
     {
       "cod_rec": "VIEW7",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "VIEWSONIC",
       "modelo": "PX701HD",
       "sn": "VPS241701783",
@@ -51,7 +51,7 @@
     },
     {
       "cod_rec": "VIEW8",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "VIEWSONIC",
       "modelo": "PX701HD",
       "sn": "VPS241701796",
@@ -61,7 +61,7 @@
     },
     {
       "cod_rec": "VIEW9",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "VIEWSONIC",
       "modelo": "PX701HD",
       "sn": "VPS241701771",
@@ -71,7 +71,7 @@
     },
     {
       "cod_rec": "VIEW10",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "VIEWSONIC",
       "modelo": "PX701HD",
       "sn": "VPS241701779",
@@ -81,7 +81,7 @@
     },
     {
       "cod_rec": "BENQ2",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "BENQ",
       "modelo": "MX631ST",
       "sn": "PDE7G02941000",
@@ -91,7 +91,7 @@
     },
     {
       "cod_rec": "BENQ3",
-      "categoria": "PROYECTOR",
+      "categoria": "proyector",
       "marca": "BENQ",
       "modelo": "MS619ST",
       "sn": "PDK4E01092000",
@@ -101,7 +101,7 @@
     },
     {
         "cod_rec": "HP1",
-        "categoria": "NOTEBOOK",
+        "categoria": "notebook",
         "marca": "HP",
         "modelo": "NX3325",
         "sn": "-",
@@ -111,7 +111,7 @@
        },
        {
         "cod_rec": "LENOVO4",
-        "categoria": "NOTEBOOK",
+        "categoria": "notebook",
         "marca": "LENOVO",
         "modelo": "G485_20136",
         "sn": "MB00267674",
@@ -121,7 +121,7 @@
        },
        {
         "cod_rec": "LENOVO3",
-        "categoria": "NOTEBOOK",
+        "categoria": "notebook",
         "marca": "LENOVO",
         "modelo": "G485_20136",
         "sn": "MB00267725",
@@ -131,7 +131,7 @@
        },
        {
         "cod_rec": "LENOVO1",
-        "categoria": "NOTEBOOK",
+        "categoria": "notebook",
         "marca": "LENOVO",
         "modelo": "G485_20136",
         "sn": "MB00267723",
@@ -141,7 +141,7 @@
        },
        {
         "cod_rec": "LENOVO2",
-        "categoria": "NOTEBOOK",
+        "categoria": "notebook",
         "marca": "LENOVO",
         "modelo": "G485_20136",
         "sn": "MB00264152",
@@ -151,7 +151,7 @@
        },
        {
         "cod_rec": "CX2",
-        "categoria": "NOTEBOOK",
+        "categoria": "notebook",
         "marca": "CX",
         "modelo": "CX224xx",
         "sn": "-",
@@ -161,7 +161,7 @@
        },
        {
         "cod_rec": "CX1",
-        "categoria": "NOTEBOOK",
+        "categoria": "notebook",
         "marca": "CX",
         "modelo": "CX224xx",
         "sn": "-",

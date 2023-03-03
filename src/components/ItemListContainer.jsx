@@ -3,25 +3,20 @@ import React from "react";
 // Import Hooks
 import { useState, useEffect } from "react";
 
+//Import Hooks de react-router-dom
+import { useParams } from "react-router-dom";
+
 // Import components propios
 import ItemList from "./ItemList";
 
 // Importa json
 import Data from "../data.json";
 
-const ItemListContainer = ({ greeting }) => {
-  // const fechData = async () => {
-  //   const response = await fetch('../data.json');
-  //   const data = await response.json();
-  //   return data;
-  // };
+const ItemListContainer = () => {
+  // Obtengo el parametro "categoria" de la url
+  const { categoria } = useParams();
 
-  // const [productos,setProductos] = useState([]);
-
-  // useEffect(() => {
-  //   fechData().then((data) => setProductos(data));
-  // }, []);
-
+  // Busqueda de prductos
   const getData = () => {
     return new Promise((resolve, reject) => {
       if (Data.length === 0) {
@@ -40,7 +35,12 @@ const ItemListContainer = ({ greeting }) => {
     getData().catch((error) => console.log(error));
   }, []);
 
-  return <>{<ItemList productos={productos} />}</>;
+  // Filtrado de productos por categoria
+  const productosFiltrados = productos.filter(
+    (producto) => producto.categoria === categoria
+  );
+
+  return <>{categoria ? <ItemList productos={productosFiltrados} /> : <ItemList productos={productos} />}</>;
 };
 
 export default ItemListContainer;
