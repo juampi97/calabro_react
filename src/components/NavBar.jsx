@@ -34,11 +34,11 @@ function NavBar() {
                 title="Categorias"
                 id="basic-nav-dropdown"
               >
-                <Nav.Item className="nav_text_drop">
+                <Nav.Item className="nav_text_drop ms-2">
                   <Link to={"/categoria/proyector"}>Proyectores</Link>
                 </Nav.Item>
 
-                <Nav.Item className="nav_text_drop">
+                <Nav.Item className="nav_text_drop ms-2">
                   <Link to={"/categoria/notebook"}>Notebooks</Link>
                 </Nav.Item>
               </NavDropdown>
