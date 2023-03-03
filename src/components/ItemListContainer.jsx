@@ -1,18 +1,17 @@
 import React from "react";
-
 // Import Hooks
 import { useState, useEffect } from "react";
-
 //Import Hooks de react-router-dom
 import { useParams } from "react-router-dom";
-
 // Import components propios
 import ItemList from "./ItemList";
-
 // Importa json
 import Data from "../data.json";
 
+
 const ItemListContainer = () => {
+
+
   // Obtengo el parametro "categoria" de la url
   const { categoria } = useParams();
 
@@ -39,6 +38,8 @@ const ItemListContainer = () => {
   const productosFiltrados = productos.filter(
     (producto) => producto.categoria === categoria
   );
+
+
 
   return <>{categoria ? <ItemList productos={productosFiltrados} /> : <ItemList productos={productos} />}</>;
 };

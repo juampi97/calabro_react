@@ -1,17 +1,13 @@
 import React from "react";
-
 // Import react-router-dom
 import { Link } from "react-router-dom";
-
 // Import components from react-bootstrap
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-
 // Import components propios
 import CartWidget from "./CartWidget";
-
 // Import images
 import unlamLogo from "../assets/logo_unlam.svg";
 
