@@ -8,7 +8,7 @@ import Card from "react-bootstrap/Card";
 const Item = ({ cod_rec, marca, modelo }) => {
   return (
     <>
-      <div className=" col-3 d-flex m-1">
+      <div className="col-10 col-lg-3 d-flex m-1">
         <Card style={{ width: "18rem" }}>
           {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
           <Card.Body>

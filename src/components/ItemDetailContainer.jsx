@@ -40,7 +40,7 @@ const productoFiltrado = producto.filter(
 
   return (
     <>
-    <div className="container-fluid d-flex justify-content-around detail-container">
+    <div className="container-fluid d-flex justify-content-around detail-container my-3">
       <div className="col-11 d-flex flex-column flex-lg-row align-items-center justify-content-around">
         {productoFiltrado.map((producto) => {
           return (

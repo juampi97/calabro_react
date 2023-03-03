@@ -16,9 +16,11 @@ function NavBar() {
     <>
       <Navbar bg="light" expand="lg">
         <Container>
-          <Navbar.Brand href="#home">
-            <img src={unlamLogo} className="navbar_logo" alt="Logo marca" />
-          </Navbar.Brand>
+          <Link to={"/"}>
+            <Navbar.Brand>
+              <img src={unlamLogo} className="navbar_logo" alt="Logo marca" />
+            </Navbar.Brand>
+          </Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
