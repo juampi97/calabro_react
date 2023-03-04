@@ -2,9 +2,13 @@
 
 Este es mi proyecto para el curso de React de Coderhouse.
 
+---
+
 #### Funcionamiento de la aplicacion
 
 ![Funcionamiento de la app](/src/assets/ecomerce.gif)
+
+---
 
 #### Podes ver mi LinkedIn
 
