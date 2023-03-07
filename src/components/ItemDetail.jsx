@@ -23,7 +23,7 @@ const ItemDetail = ({ cod_rec, marca, modelo, hdmi, vga, stock }) => {
         <h4 className="mt-1 mt-lg-3 mb-2 mb-lg-0"> {marca}</h4>
         <p className="mt-1 mt-lg-3 mb-2 mb-lg-0">Salida HDMI: {salidaHdmi}</p>
         <p className="mt-1 mt-lg-2 mb-2 mb-lg-2">Salida Vga: {salidaVga}</p>
-        <div className="d-flex flex-row align-items-center justify-content-around col-10 col-lg-5 my-lg-3 p-2 border border-2 border-light-subtle rounded-3">
+        <div className="d-flex flex-row align-items-center justify-content-around col-10 col-md-8 my-lg-3 p-2 border border-2 border-light-subtle rounded-3">
           <ItemCount stock={stock} />
         </div>
         <div className="pt-2">
