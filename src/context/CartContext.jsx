@@ -8,16 +8,27 @@ const CartContext = ( { children } ) => {
   const [cart, setCart] = useState([]);
 
   const addItem = (cod_rec, cantidad) => {
-    const item = {
-      cod_rec: cod_rec,
-      cantidad: cantidad,
-    };
-    setCart([...cart, item]);
-    console.log(cart);
+    const position = cart.findIndex((item) => item.cod_rec === cod_rec);
+    if (position === -1){
+        const item = {
+            cod_rec: cod_rec,
+            cantidad: cantidad,
+        };
+        setCart([...cart, item]);
+        
+    } else {
+        cart[position].cantidad += cantidad;
+        setCart([...cart]);
+    }
+
   }
 
-  const removeItem = () => {
-
+  const removeItem = (cod_rec) => {
+    const position = cart.findIndex((item) => item.cod_rec === cod_rec);
+    if (position !== -1) {
+      cart.splice(position, 1);
+      setCart([...cart]);
+    }  
   }
 
   const resetCart = () => {
