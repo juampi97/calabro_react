@@ -28,6 +28,8 @@ const CartContext = ( { children } ) => {
   const removeItem = (cod_rec) => {
     const position = cart.findIndex((item) => item.cod_rec === cod_rec);
     if (position !== -1) {
+      const restarCantidad = cart[position].cantidad;
+      setTotalProductos(totalProductos - restarCantidad);
       cart.splice(position, 1);
       setCart([...cart]);
     }  
