@@ -23,7 +23,7 @@ const ItemListContainer = () => {
       }
       setTimeout(() => {
         resolve(Data);
-      }, 2000);
+      }, 500);
     });
   };
 
