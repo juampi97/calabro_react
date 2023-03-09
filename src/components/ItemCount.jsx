@@ -13,10 +13,10 @@ const ItemCount = ({ stock }) => {
   const cantidadInicial = 1;
   const [cantidad, setCantidad] = useState(cantidadInicial);
 
-  const onAdd = () => {
+  const onAddQty = () => {
     cantidad < stock ? setCantidad(cantidad + 1) : setCantidad(cantidad);
   };
-  const onRestar = () => {
+  const onRestarQty = () => {
     cantidad > cantidadInicial
       ? setCantidad(cantidad - 1)
       : setCantidad(cantidad);
@@ -31,7 +31,7 @@ const ItemCount = ({ stock }) => {
         <Button
           variant="outline-light"
           className="d-flex align-items-center justify-content-around text-dark"
-          onClick={onRestar}
+          onClick={onRestarQty}
         >
           <span className="material-symbols-outlined">horizontal_rule</span>
         </Button>
@@ -39,7 +39,7 @@ const ItemCount = ({ stock }) => {
         <Button
           variant="outline-light"
           className="d-flex align-items-center justify-content-around text-dark"
-          onClick={onAdd}
+          onClick={onAddQty}
         >
           <span className="material-symbols-outlined">add</span>
         </Button>
