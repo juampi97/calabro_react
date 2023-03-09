@@ -1,5 +1,8 @@
 import React from "react";
-
+// Import hooks react
+import { useContext } from "react";
+// Import context
+import { CounterCartContext } from "../context/CartContext";
 // Import hook
 import { useState } from "react";
 import { useParams } from "react-router-dom";
@@ -7,6 +10,7 @@ import { useParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 
 const ItemCount = ({ stock }) => {
+  const { cart, addItem } = useContext(CounterCartContext);
 
   const { cod_rec } = useParams();
 
@@ -21,9 +25,11 @@ const ItemCount = ({ stock }) => {
       ? setCantidad(cantidad - 1)
       : setCantidad(cantidad);
   };
-  const onAddCart = () => {
-    console.log(`Se agregaron ${cantidad} unidades al carrito del producto ${cod_rec}`);
-  };
+  // const onAddCart = () => {
+  //   console.log(
+  //     `Se agregaron ${cantidad} unidades al carrito del producto ${cod_rec}`
+  //   );
+  // };
 
   return (
     <>
@@ -45,7 +51,7 @@ const ItemCount = ({ stock }) => {
         </Button>
       </div>
       <div className="pt-2">
-        <Button onClick={onAddCart} className="py-2 p-3" variant="warning">
+        <Button onClick={() => addItem(cod_rec, cantidad)} className="py-2 p-3" variant="warning">
           Agregar
         </Button>
       </div>

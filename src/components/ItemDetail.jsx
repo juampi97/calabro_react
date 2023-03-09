@@ -3,6 +3,7 @@ import React from "react";
 import ItemCount from "./ItemCount";
 
 const ItemDetail = ({ cod_rec, marca, modelo, hdmi, vga, stock }) => {
+
   const salidaHdmi = hdmi ? "Disponible" : "No disponible";
   const salidaVga = vga ? "Disponible" : "No disponible";
 
