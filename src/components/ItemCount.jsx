@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-
-const ItemCount = () => {
-  return (
-    <div>ItemCount</div>
-  )
-}
-
-export default ItemCount
-=======
 import React from "react";
 // Import hooks react
 import { useContext } from "react";
@@ -71,4 +60,3 @@ const ItemCount = ({ stock }) => {
 };
 
 export default ItemCount;
->>>>>>> fd679e72ed47446d36210b8a67a81886a0c36d9c

@@ -1,11 +1,8 @@
 import React from "react";
 
-<<<<<<< HEAD
-=======
 // Import react-router-dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
->>>>>>> fd679e72ed47446d36210b8a67a81886a0c36d9c
 // Import Bootstrap css
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -20,13 +17,6 @@ import Cart from "./components/Cart";
 import CartContext from "./context/CartContext";
 
 const App = () => {
-<<<<<<< HEAD
-
-  return (
-    <>
-      <NavBar />
-      <ItemListContainer greeting={"Bienvenidos a UNLaM - ecomerce"} />
-=======
   return (
     <>
       <CartContext>
@@ -49,7 +39,6 @@ const App = () => {
           </Routes>
         </BrowserRouter>
       </CartContext>
->>>>>>> fd679e72ed47446d36210b8a67a81886a0c36d9c
     </>
   );
 };
