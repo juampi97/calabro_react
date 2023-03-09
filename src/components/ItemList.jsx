@@ -13,6 +13,8 @@ const ItemList = ({ productos }) => {
                 cod_rec={producto.cod_rec}
                 marca={producto.marca}
                 modelo={producto.modelo}
+                vga={producto.vga}
+                hdmi={producto.hdmi}
               />
             );
           })}

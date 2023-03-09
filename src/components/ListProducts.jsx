@@ -14,7 +14,7 @@ const ListProducts = ({ cod_rec, cantidad }) => {
 
   return (
     <>
-      <div className="col-5">
+      <div className="col-10 col-lg-7">
         <ListGroup className="my-1" as="ol" numbered>
           <ListGroup.Item as="li" className="d-flex align-items-start">
             <div className="col-11 ms-2">

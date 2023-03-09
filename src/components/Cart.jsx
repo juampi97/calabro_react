@@ -10,7 +10,6 @@ import ResetCarrito from "./ResetCarrito";
 
 const Cart = () => {
   const { cart } = useContext(CounterCartContext);
-  console.log(cart);
 
   return (
     <>
