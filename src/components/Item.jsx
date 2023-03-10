@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // Import components Bootstrap
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import ItemsAdds from "./ItemsAdds";
+import ItemsAditionals from "./ItemsAditionals";
 
 const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
  
@@ -24,7 +24,7 @@ const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
             <Card.Title>{cod_rec}</Card.Title>
             <Card.Text>Marca: {marca}</Card.Text>
             <Card.Text>Modelo: {modelo}</Card.Text>
-            <ItemsAdds cod_rec={cod_rec} />
+            <ItemsAditionals />
             <div className="container-fluid d-flex justify-items-around align-items-center">
               <div className="mx-3">
                 <Link to={`/producto/${cod_rec}`}>
