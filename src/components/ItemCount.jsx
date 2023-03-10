@@ -32,7 +32,6 @@ const ItemCount = ({ stock }) => {
 
   return (
     <>
-      <ItemsAditionals hdmi={hdmi} />
       <div className="d-flex flex-row align-items-center justify-content-around col-10 col-md-5 col-lg-9 my-lg-3 p-2 border border-2 border-light-subtle rounded-3">
         <Button
           variant="outline-light"
