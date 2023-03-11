@@ -1,6 +1,6 @@
 import React from "react";
 // Import hooks react
-import { useContext } from "react";
+import { useState, useContext } from "react";
 // Import context
 import { CounterCartContext } from "../context/CartContext";
 // Import Link de react-router-dom
@@ -12,8 +12,12 @@ import ItemsAditionals from "./ItemsAditionals";
 
 const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
  
-  const { cart, addItem } = useContext(CounterCartContext);
+  const { addItem } = useContext(CounterCartContext);
   const cantidad = 1;
+
+  const statesCheckboxes = (state) => {
+     console.log(state);
+  };
  
   return (
     <>
@@ -24,7 +28,9 @@ const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
             <Card.Title>{cod_rec}</Card.Title>
             <Card.Text>Marca: {marca}</Card.Text>
             <Card.Text>Modelo: {modelo}</Card.Text>
-            <ItemsAditionals />
+
+            <ItemsAditionals statesCheckboxes={statesCheckboxes} />
+           
             <div className="container-fluid d-flex justify-items-around align-items-center">
               <div className="mx-3">
                 <Link to={`/producto/${cod_rec}`}>

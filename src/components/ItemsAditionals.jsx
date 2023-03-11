@@ -2,22 +2,33 @@ import React from "react";
 // Import hook react
 import { useState } from "react";
 
-const ItemsAditionals = ({hdmi}) => {
-
-  console.log(hdmi);
-
+const ItemsAditionals = ({statesCheckboxes}) => {
+  
+  let hdmiState = false;
+  let vgaState = false;
 
   const [isCheckedHDMI, setIsCheckedHDMI] = useState(false);
+  const [isCheckedVGA, setIsCheckedVGA] = useState(false);
 
   const handleChangeHDMI = (event) => {
     setIsCheckedHDMI(event.target.checked);
-    
+    if(!isCheckedHDMI){
+      hdmiState = true;
+    }else{
+      hdmiState = false;
+    }
+    statesCheckboxes([hdmiState, vgaState]);
   };
-  const [isCheckedVGA, setIsCheckedVGA] = useState(false);
-
+  
+  
   const handleChangeVGA = (event) => {
     setIsCheckedVGA(event.target.checked);
-    
+    if(!isCheckedVGA){
+      vgaState=true;
+    }else{
+      vgaState=false;
+    }
+    statesCheckboxes([hdmiState, vgaState]);
   };
 
   return (
