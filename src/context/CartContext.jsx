@@ -5,6 +5,10 @@ import { createContext ,useState } from "react";
 export const CounterCartContext = createContext(null);
 
 const CartContext = ( { children } ) => {
+
+  let hdmiAdicional = 0;
+  let vgaAdicional = 0;
+
   const [cart, setCart] = useState([]);
   const [totalProductos, setTotalProductos] = useState(0);
 
@@ -23,6 +27,9 @@ const CartContext = ( { children } ) => {
         setTotalProductos(totalProductos + cantidad);
         setCart([...cart]);
     }
+    hdmiAditionalState ? hdmiAdicional += 1 : hdmiAdicional += 0;
+    vgaAditionalState ? vgaAdicional += 1 : vgaAdicional += 0;
+    console.log(hdmiAdicional, vgaAdicional);
   }
 
   const removeItem = (cod_rec) => {
@@ -41,7 +48,7 @@ const CartContext = ( { children } ) => {
   }
 
   return (
-  <CounterCartContext.Provider value={{cart, totalProductos, addItem, removeItem, resetCart}}>{children}</CounterCartContext.Provider>
+  <CounterCartContext.Provider value={{cart, totalProductos, hdmiAdicional, vgaAdicional, addItem, removeItem, resetCart}}>{children}</CounterCartContext.Provider>
   );
 };
 

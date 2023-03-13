@@ -26,7 +26,7 @@ const ItemsAditionals = (props) => {
             checked={hdmiAditionalState}
             onChange={handlehdmiAditionalStateChange}
             />
-            <span className="ps-2">VGA - OPCIONAL</span>
+            <span className="ps-2">HDMI - OPCIONAL</span>
         </label>
       </div>
       <div>

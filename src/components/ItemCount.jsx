@@ -11,12 +11,9 @@ import Button from "react-bootstrap/Button";
 import ItemsAditionals from "./ItemsAditionals";
 
 const ItemCount = ({ stock }) => {
-
   const { cart, addItem } = useContext(CounterCartContext);
 
   const { cod_rec } = useParams();
-
-  const { hdmi , setHDMI } = useState(0);  
 
   const cantidadInicial = 1;
   const [cantidad, setCantidad] = useState(cantidadInicial);
@@ -30,10 +27,20 @@ const ItemCount = ({ stock }) => {
       : setCantidad(cantidad);
   };
 
+  const [hdmiAditionalState, sethdmiAditionalState] = useState(false);
+  const [vgaAditionalState, setvgaAditionalState] = useState(false);
+
+  function handleCheckboxChange(hdmiAditionalStateValue, vgaAditionalStateValue) {
+    sethdmiAditionalState(hdmiAditionalStateValue);
+    setvgaAditionalState(vgaAditionalStateValue);
+    console.log(hdmiAditionalStateValue, vgaAditionalStateValue);
+  }
+
   return (
     <>
-    
-      <ItemsAditionals />
+      <div>
+        <ItemsAditionals enviarCheckbox={handleCheckboxChange} />
+      </div>
 
       <div className="d-flex flex-row align-items-center justify-content-around col-10 col-md-5 col-lg-9 my-lg-3 p-2 border border-2 border-light-subtle rounded-3">
         <Button
@@ -54,7 +61,7 @@ const ItemCount = ({ stock }) => {
       </div>
       <div className="pt-2">
         <Button
-          onClick={() => addItem(cod_rec, cantidad)}
+          onClick={() => addItem(cod_rec, cantidad, hdmiAditionalState, vgaAditionalState)}
           className="py-2 p-3"
           variant="warning"
         >
