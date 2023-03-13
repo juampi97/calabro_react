@@ -11,14 +11,18 @@ import Card from "react-bootstrap/Card";
 import ItemsAditionals from "./ItemsAditionals";
 
 const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
- 
   const { addItem } = useContext(CounterCartContext);
   const cantidad = 1;
 
-  const statesCheckboxes = (state) => {
-     console.log(state);
-  };
- 
+  const [hdmiAditionalState, sethdmiAditionalState] = useState(false);
+  const [vgaAditionalState, setvgaAditionalState] = useState(false);
+
+  function handleCheckboxChange(hdmiAditionalStateValue, vgaAditionalStateValue) {
+    sethdmiAditionalState(hdmiAditionalStateValue);
+    setvgaAditionalState(vgaAditionalStateValue);
+    console.log(hdmiAditionalStateValue, vgaAditionalStateValue);
+  }
+
   return (
     <>
       <div className="col-10 col-lg-3 d-flex m-1 item_card">
@@ -29,8 +33,10 @@ const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
             <Card.Text>Marca: {marca}</Card.Text>
             <Card.Text>Modelo: {modelo}</Card.Text>
 
-            <ItemsAditionals statesCheckboxes={statesCheckboxes} />
-           
+            <div>
+              <ItemsAditionals enviarCheckbox={handleCheckboxChange} />
+            </div>
+
             <div className="container-fluid d-flex justify-items-around align-items-center">
               <div className="mx-3">
                 <Link to={`/producto/${cod_rec}`}>
@@ -38,7 +44,12 @@ const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
                 </Link>
               </div>
               <div className="mx-3">
-                <Button onClick={() => addItem(cod_rec,cantidad)} variant="success">Agregar</Button>
+                <Button
+                  onClick={() => addItem(cod_rec, cantidad, hdmiAditionalState, vgaAditionalState)}
+                  variant="success"
+                >
+                  Agregar
+                </Button>
               </div>
             </div>
           </Card.Body>

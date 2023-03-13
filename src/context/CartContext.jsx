@@ -8,7 +8,7 @@ const CartContext = ( { children } ) => {
   const [cart, setCart] = useState([]);
   const [totalProductos, setTotalProductos] = useState(0);
 
-  const addItem = (cod_rec, cantidad) => {
+  const addItem = (cod_rec, cantidad, hdmiAditionalState, vgaAditionalState) => {
     const position = cart.findIndex((item) => item.cod_rec === cod_rec);
     if (position === -1){
         const item = {
