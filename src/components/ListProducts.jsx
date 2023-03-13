@@ -10,7 +10,7 @@ import Button from "react-bootstrap/Button";
 
 const ListProducts = ({ cod_rec, cantidad }) => {
 
-    const { hdmiAdicional, vgaAdicional, removeItem } = useContext(CounterCartContext);
+    const { removeItem } = useContext(CounterCartContext);
 
   return (
     <>
@@ -20,24 +20,6 @@ const ListProducts = ({ cod_rec, cantidad }) => {
             <div className="col-11 ms-2">
               <div className="fw-bold">{cod_rec}</div>
               Cantidad: {cantidad}
-            </div>
-            <div className="col-1 pt-1">
-              <Button onClick={ ()=>removeItem(cod_rec)} variant="danger">X</Button>
-            </div>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className="d-flex align-items-start">
-            <div className="col-11 ms-2">
-              <div className="fw-bold">HDMI adicional</div>
-              Cantidad: {hdmiAdicional}
-            </div>
-            <div className="col-1 pt-1">
-              <Button onClick={ ()=>removeItem(cod_rec)} variant="danger">X</Button>
-            </div>
-          </ListGroup.Item>
-          <ListGroup.Item as="li" className="d-flex align-items-start">
-            <div className="col-11 ms-2">
-              <div className="fw-bold">VGA adicional</div>
-              Cantidad: {vgaAdicional}
             </div>
             <div className="col-1 pt-1">
               <Button onClick={ ()=>removeItem(cod_rec)} variant="danger">X</Button>

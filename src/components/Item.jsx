@@ -20,7 +20,6 @@ const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
   function handleCheckboxChange(hdmiAditionalStateValue, vgaAditionalStateValue) {
     sethdmiAditionalState(hdmiAditionalStateValue);
     setvgaAditionalState(vgaAditionalStateValue);
-    console.log(hdmiAditionalStateValue, vgaAditionalStateValue);
   }
 
   return (
