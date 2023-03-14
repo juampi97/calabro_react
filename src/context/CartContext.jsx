@@ -36,6 +36,7 @@ const CartContext = ( { children } ) => {
     if (position !== -1) {
       const restarCantidad = cart[position].cantidad;
       setTotalProductos(totalProductos - restarCantidad);
+      setTotalPrecio(totalPrecio - (restarCantidad * cart[position].precio));
       cart.splice(position, 1);
       setCart([...cart]);
     }  
@@ -44,6 +45,7 @@ const CartContext = ( { children } ) => {
   const resetCart = () => {
     setCart([]);
     setTotalProductos(0);
+    setTotalPrecio(0)
   }
 
   return (
