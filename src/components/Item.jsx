@@ -10,7 +10,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import ItemsAditionals from "./ItemsAditionals";
 
-const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
+const Item = ({ cod_rec, marca, modelo, vga, hdmi, precio }) => {
   const { cart, addItem } = useContext(CounterCartContext);
   const cantidad = 1;
 
@@ -24,6 +24,7 @@ const Item = ({ cod_rec, marca, modelo, vga, hdmi }) => {
               <Card.Title>{cod_rec}</Card.Title>
               <Card.Text>Marca: {marca}</Card.Text>
               <Card.Text>Modelo: {modelo}</Card.Text>
+              <Card.Text>Precio: ${precio}</Card.Text>
               <Link to={`/producto/${cod_rec}`}>
                 <Button variant="secondary">Ver mas</Button>
               </Link>

@@ -58,6 +58,7 @@ const ItemDetailContainer = () => {
                 hdmi={producto.hdmi}
                 vga={producto.vga}
                 stock={producto.stock}
+                precio={producto.precio}
               />
             );
           })}

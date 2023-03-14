@@ -2,12 +2,14 @@ import React from "react";
 // Import components
 import ItemCount from "./ItemCount";
 
-const ItemDetail = ({ cod_rec, marca, modelo, hdmi, vga, stock }) => {
+const ItemDetail = ({ cod_rec, marca, modelo, hdmi, vga, stock, precio }) => {
 
+  
   const salidaHdmi = hdmi ? "Disponible" : "No disponible";
   const salidaVga = vga ? "Disponible" : "No disponible";
-
+  
   const idImg = marca.toLowerCase();
+  
 
   return (
     <>
@@ -24,7 +26,8 @@ const ItemDetail = ({ cod_rec, marca, modelo, hdmi, vga, stock }) => {
         <h1 className="mt-2 mt-lg-2 mb-2 mb-lg-0 text-center">{modelo}</h1>
         <h4 className="mt-1 mt-lg-3 mb-2 mb-lg-0"> {marca}</h4>
         <p className="mt-1 mt-lg-3 mb-2 mb-lg-0">Salida HDMI: {salidaHdmi}</p>
-        <p className="mt-1 mt-lg-2 mb-2 mb-lg-2">Salida Vga: {salidaVga}</p>  
+        <p className="mt-1 mt-lg-2 mb-2 mb-lg-2">Salida Vga: {salidaVga}</p>
+        <p className="mt-1 mt-lg-2 mb-2 mb-lg-2">Precio: ${precio}</p>  
         <ItemCount stock={stock} />
       </div>
     </>

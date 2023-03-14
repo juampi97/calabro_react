@@ -15,6 +15,7 @@ const ItemList = ({ productos }) => {
                 modelo={producto.modelo}
                 vga={producto.vga}
                 hdmi={producto.hdmi}
+                precio={producto.precio}
               />
             );
           })}
