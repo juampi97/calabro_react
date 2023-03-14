@@ -5,12 +5,13 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 // Import components propios
 import ItemList from "./ItemList";
+import SpinnerLoad from "./SpinnerLoad";
 // Importa json
 import Data from "../data.json";
 
-
 const ItemListContainer = () => {
-
+  const [productosLoaded, setProductosLoaded] = useState(false);
+  
 
   // Obtengo el parametro "categoria" de la url
   const { categoria } = useParams();
@@ -23,7 +24,8 @@ const ItemListContainer = () => {
       }
       setTimeout(() => {
         resolve(Data);
-      }, 500);
+        setProductosLoaded(true);
+      }, 2000);
     });
   };
 
@@ -39,9 +41,19 @@ const ItemListContainer = () => {
     (producto) => producto.categoria === categoria
   );
 
+  if(!productosLoaded){
+    return <SpinnerLoad />
+  }
 
-
-  return <>{categoria ? <ItemList productos={productosFiltrados} /> : <ItemList productos={productos} />}</>;
+  return (
+    <>
+      {categoria ? (
+        <ItemList productos={productosFiltrados} />
+      ) : (
+        <ItemList productos={productos} />
+      )}
+    </>
+  );
 };
 
 export default ItemListContainer;

@@ -7,7 +7,8 @@
       "sn": "Q8WQ402AAAAAC1061",
       "vga": 1,
       "hdmi": 1,
-      "stock": 50
+      "stock": 10,
+      "precio": 1000
     },
     {
       "cod_rec": "VIEW2",
@@ -17,7 +18,8 @@
       "sn": "R8K113406795",
       "vga": 1,
       "hdmi": 0,
-      "stock": 50
+      "stock": 10,
+      "precio": 3000
     },
     {
       "cod_rec": "VIEW5",
@@ -27,57 +29,8 @@
       "sn": "UET165001213",
       "vga": 1,
       "hdmi": 1,
-      "stock": 50
-    },
-    {
-      "cod_rec": "VIEW6",
-      "categoria": "proyector",
-      "marca": "VIEWSONIC",
-      "modelo": "PX701HD",
-      "sn": "VPS241701800",
-      "vga": 1,
-      "hdmi": 1,
-      "stock": 50
-    },
-    {
-      "cod_rec": "VIEW7",
-      "categoria": "proyector",
-      "marca": "VIEWSONIC",
-      "modelo": "PX701HD",
-      "sn": "VPS241701783",
-      "vga": 1,
-      "hdmi": 1,
-      "stock": 50
-    },
-    {
-      "cod_rec": "VIEW8",
-      "categoria": "proyector",
-      "marca": "VIEWSONIC",
-      "modelo": "PX701HD",
-      "sn": "VPS241701796",
-      "vga": 1,
-      "hdmi": 1,
-      "stock": 50
-    },
-    {
-      "cod_rec": "VIEW9",
-      "categoria": "proyector",
-      "marca": "VIEWSONIC",
-      "modelo": "PX701HD",
-      "sn": "VPS241701771",
-      "vga": 1,
-      "hdmi": 1,
-      "stock": 50
-    },
-    {
-      "cod_rec": "VIEW10",
-      "categoria": "proyector",
-      "marca": "VIEWSONIC",
-      "modelo": "PX701HD",
-      "sn": "VPS241701779",
-      "vga": 1,
-      "hdmi": 1,
-      "stock": 50
+      "stock": 10,
+      "precio": 4000
     },
     {
       "cod_rec": "BENQ2",
@@ -87,7 +40,8 @@
       "sn": "PDE7G02941000",
       "vga": 1,
       "hdmi": 1,
-      "stock": 50
+      "stock": 10,
+      "precio": 10000
     },
     {
       "cod_rec": "BENQ3",
@@ -97,7 +51,8 @@
       "sn": "PDK4E01092000",
       "vga": 1,
       "hdmi": 1,
-      "stock": 50
+      "stock": 10,
+      "precio": 25000
     },
     {
         "cod_rec": "HP1",
@@ -107,27 +62,8 @@
         "sn": "-",
         "vga": 1,
         "hdmi": 0,
-        "stock": 50
-       },
-       {
-        "cod_rec": "LENOVO4",
-        "categoria": "notebook",
-        "marca": "LENOVO",
-        "modelo": "G485_20136",
-        "sn": "MB00267674",
-        "vga": 1,
-        "hdmi": 0,
-        "stock": 50
-       },
-       {
-        "cod_rec": "LENOVO3",
-        "categoria": "notebook",
-        "marca": "LENOVO",
-        "modelo": "G485_20136",
-        "sn": "MB00267725",
-        "vga": 1,
-        "hdmi": 0,
-        "stock": 50
+        "stock": 10,
+        "precio": 10000
        },
        {
         "cod_rec": "LENOVO1",
@@ -137,7 +73,8 @@
         "sn": "MB00267723",
         "vga": 1,
         "hdmi": 0,
-        "stock": 50
+        "stock": 10,
+        "precio": 10000
        },
        {
         "cod_rec": "LENOVO2",
@@ -147,17 +84,8 @@
         "sn": "MB00264152",
         "vga": 1,
         "hdmi": 0,
-        "stock": 50
-       },
-       {
-        "cod_rec": "CX2",
-        "categoria": "notebook",
-        "marca": "CX",
-        "modelo": "CX224xx",
-        "sn": "-",
-        "vga": 0,
-        "hdmi": 1,
-        "stock": 50
+        "stock": 10,
+        "precio": 3000
        },
        {
         "cod_rec": "CX1",
@@ -167,6 +95,7 @@
         "sn": "-",
         "vga": 0,
         "hdmi": 1,
-        "stock": 50
+        "stock": 10,
+        "precio": 8000
        }
   ]
