@@ -15,7 +15,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 const Cart = () => {
-  const { cart } = useContext(CounterCartContext);
+  const { cart, totalPrecio } = useContext(CounterCartContext);
 
   if (cart.length === 0) {
     return (
@@ -50,16 +50,24 @@ const Cart = () => {
 
   return (
     <>
-      <div className="container-fluid d-flex flex-column align-items-center my-5">
+      <div className="container-fluid d-flex flex-column align-items-center mt-5">
         {cart.map((producto) => {
           return (
             <ListProducts
               key={producto.cod_rec}
               cod_rec={producto.cod_rec}
               cantidad={producto.cantidad}
+              precio={producto.precio}
             />
           );
         })}
+      </div>
+      <div className="container-fluid d-flex flex-column align-items-center mt-2">
+        <div className="col-11 col-lg-7">
+          <Alert variant="dark">
+            <Alert.Heading>Total: ${totalPrecio}</Alert.Heading>
+          </Alert>
+        </div>
       </div>
       <ResetCarrito />
       <Formulario />

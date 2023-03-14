@@ -7,24 +7,30 @@ export const CounterCartContext = createContext(null);
 const CartContext = ( { children } ) => {
   const [cart, setCart] = useState([]);
   const [totalProductos, setTotalProductos] = useState(0);
+  const [totalPrecio, setTotalPrecio] = useState(0);
 
-  const addItem = (cod_rec, cantidad) => {
+  const addItem = (cod_rec, cantidad, precio) => {
     const position = cart.findIndex((item) => item.cod_rec === cod_rec);
     if (position === -1){
         const item = {
             cod_rec: cod_rec,
             cantidad: cantidad,
+            precio: precio,
+            precioTotal: cantidad * precio
         };
         setTotalProductos(totalProductos + cantidad);
+        setTotalPrecio(totalPrecio + (cantidad * precio));
         setCart([...cart, item]);
         
     } else {
         cart[position].cantidad += cantidad;
         setTotalProductos(totalProductos + cantidad);
+        setTotalPrecio(totalPrecio + (cantidad * precio));
         setCart([...cart]);
-    }
+      }
   }
 
+  
   const removeItem = (cod_rec) => {
     const position = cart.findIndex((item) => item.cod_rec === cod_rec);
     if (position !== -1) {
@@ -41,7 +47,7 @@ const CartContext = ( { children } ) => {
   }
 
   return (
-  <CounterCartContext.Provider value={{cart, totalProductos, addItem, removeItem, resetCart}}>{children}</CounterCartContext.Provider>
+  <CounterCartContext.Provider value={{cart, totalProductos, totalPrecio, addItem, removeItem, resetCart}}>{children}</CounterCartContext.Provider>
   );
 };
 

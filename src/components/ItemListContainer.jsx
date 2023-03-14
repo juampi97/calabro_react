@@ -25,7 +25,7 @@ const ItemListContainer = () => {
       setTimeout(() => {
         resolve(Data);
         setProductosLoaded(true);
-      }, 2000);
+      }, 100);
     });
   };
 

@@ -6,26 +6,32 @@ import { CounterCartContext } from "../context/CartContext";
 // Import bootstrap elements
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 
-
-const ListProducts = ({ cod_rec, cantidad }) => {
-
-    const { removeItem } = useContext(CounterCartContext);
+const ListProducts = ({ cod_rec, cantidad, precio }) => {
+  const { totalPrecio, removeItem } = useContext(CounterCartContext);
 
   return (
     <>
-      <div className="col-10 col-lg-7">
-        <ListGroup className="my-1" as="ol" numbered>
+      <div className="col-11 col-lg-7">
+        <ListGroup className="my-2" as="ol">
           <ListGroup.Item as="li" className="d-flex align-items-start">
-            <div className="col-11 ms-2">
+            <div className="col-10 col-lg-11 ms-2">
               <div className="fw-bold">{cod_rec}</div>
               Cantidad: {cantidad}
+              <br />
+              $/Unidad: ${precio}
+              <br />
+              $/Total: ${cantidad * precio}
             </div>
             <div className="col-1 pt-1">
-              <Button onClick={ ()=>removeItem(cod_rec)} variant="danger">X</Button>
+              <Button onClick={() => removeItem(cod_rec)} variant="danger">
+                X
+              </Button>
             </div>
           </ListGroup.Item>
         </ListGroup>
+
       </div>
     </>
   );

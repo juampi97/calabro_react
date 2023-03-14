@@ -28,7 +28,7 @@ const ItemDetail = ({ cod_rec, marca, modelo, hdmi, vga, stock, precio }) => {
         <p className="mt-1 mt-lg-3 mb-2 mb-lg-0">Salida HDMI: {salidaHdmi}</p>
         <p className="mt-1 mt-lg-2 mb-2 mb-lg-2">Salida Vga: {salidaVga}</p>
         <p className="mt-1 mt-lg-2 mb-2 mb-lg-2">Precio: ${precio}</p>  
-        <ItemCount stock={stock} />
+        <ItemCount stock={stock} precio={precio} />
       </div>
     </>
   );
