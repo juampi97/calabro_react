@@ -10,6 +10,7 @@ import SpinnerLoad from "./SpinnerLoad";
 import { collection, doc, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemListContainer = () => {
+
   const [productosLoaded, setProductosLoaded] = useState(false);
 
   // Obtengo el parametro "categoria" de la url
@@ -22,11 +23,12 @@ const ItemListContainer = () => {
     const db = getFirestore();
     const itemCollection = collection(db, "productos");
     getDocs(itemCollection).then((snapshot) => {
-      const docs = snapshot.docs.map((doc) => doc.data(), doc.id);
-      setProductos(docs);
+      setProductos(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
       setProductosLoaded(true);
-    });
+    }
+    );
   }, []);
+  console.log(productos);
 
 
   // Filtrado de productos por categoria

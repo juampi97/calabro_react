@@ -2,7 +2,7 @@ import React from "react";
 // Import components
 import ItemCount from "./ItemCount";
 
-const ItemDetail = ({ cod_rec, marca, modelo, hdmi, vga, stock, precio }) => {
+const ItemDetail = ({ cod_rec, marca, modelo, hdmi, vga, stock, precio, id }) => {
 
   
   const salidaHdmi = hdmi ? "Disponible" : "No disponible";
