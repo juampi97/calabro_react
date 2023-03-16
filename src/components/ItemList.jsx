@@ -9,7 +9,7 @@ const ItemList = ({ productos }) => {
           {productos.map((producto) => {
             return (
               <Item
-                key={producto.cod_rec}
+                key={producto.id}
                 cod_rec={producto.cod_rec}
                 marca={producto.marca}
                 modelo={producto.modelo}
@@ -25,4 +25,4 @@ const ItemList = ({ productos }) => {
   );
 };
 
-export default React.memo(ItemList);
+export default ItemList;
