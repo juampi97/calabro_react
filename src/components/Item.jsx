@@ -8,11 +8,9 @@ import { Link } from "react-router-dom";
 // Import components Bootstrap
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import ItemsAditionals from "./ItemsAditionals";
 
 const Item = ({ cod_rec, marca, modelo, vga, hdmi, precio,id }) => {
-  const { cart, addItem } = useContext(CounterCartContext);
-  const cantidad = 1;
+
 
   return (
     <>
