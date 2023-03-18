@@ -23,7 +23,7 @@ const Item = ({ cod_rec, marca, modelo, vga, hdmi, precio,id }) => {
               <Card.Text>Marca: {marca}</Card.Text>
               <Card.Text>Modelo: {modelo}</Card.Text>
               <Card.Text>Precio: ${precio}</Card.Text>
-              <Link to={`/producto/${cod_rec}`}>
+              <Link to={`/producto/${id}`}>
                 <Button variant="secondary">Ver mas</Button>
               </Link>
             </Card.Body>

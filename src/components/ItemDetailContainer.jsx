@@ -7,56 +7,37 @@ import { useState, useEffect } from "react";
 import SpinnerLoad from "./SpinnerLoad";
 import ItemDetail from "./ItemDetail";
 // Import firebase
-import { collection, query, where, doc, getDocs, getFirestore } from "firebase/firestore";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
   // Obtengo el parametro de la url
-  const { cod_rec } = useParams();
+  const { id } = useParams();
 
   const [productosLoaded, setProductosLoaded] = useState(false);
 
   const [producto, setProducto] = useState([]);
 
-  useEffect(() => { 
+  useEffect(() => {
     const db = getFirestore();
-
-    const q = query(collection(db,"productos"), where("cod_rec", "==", cod_rec));
-
-    getDocs(q).then((snapshot) => {
-      if(snapshot.size !== 0){
-        setProducto(snapshot.docs.map((doc) => ({...doc.data(), id: doc.id})));
+    const q = doc(db, "productos", `${id}`);
+    getDoc(q).then((snapshot) => {
+      if (snapshot.exists()) {
+        const doc = snapshot.data();
+        setProducto(doc);
         setProductosLoaded(true);
       }
     });
-  }, []);  
-  console.log(producto);
+  }, []);
 
-
-
-  if(!productosLoaded){
-    return <SpinnerLoad />
+  if (!productosLoaded) {
+    return <SpinnerLoad />;
   }
-
-
 
   return (
     <>
       <div className="container-fluid d-flex justify-content-around detail-container my-3">
         <div className="col-11 d-flex flex-column flex-lg-row align-items-center justify-content-around">
-        {producto.map((producto) => {
-          return (
-            <ItemDetail
-              key={producto.cod_rec}
-              cod_rec={producto.cod_rec}
-              marca={producto.marca}
-              modelo={producto.modelo}
-              hdmi={producto.hdmi}
-              vga={producto.vga}
-              stock={producto.stock}
-              precio={producto.precio}
-            />
-          );
-        })}
+          {productosLoaded ? <ItemDetail producto={producto} /> : ""}
         </div>
       </div>
     </>

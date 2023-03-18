@@ -32,7 +32,7 @@ const App = () => {
             />
             <Route
               exact
-              path="/producto/:cod_rec"
+              path="/producto/:id"
               element={<ItemDetailContainer />}
             />
             <Route exact path="/carrito" element={<Cart />} />
