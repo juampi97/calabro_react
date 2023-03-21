@@ -145,7 +145,7 @@ const Formulario = () => {
           </div>
           <div className="pt-4">
             <Button type="submit" className="py-2 p-3" variant="warning">
-              Enviar
+              Terminar compra
             </Button>
           </div>
         </div>

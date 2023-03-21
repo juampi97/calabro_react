@@ -1,6 +1,6 @@
 # Proyecto e-comerce
 
-Este es mi proyecto para el curso de React de Coderhouse.
+Este es mi proyecto para el curso de React de Coderhouse. Es un ecomerce de venta de productos utlizados para dar exposiciones.
 
 ---
 
