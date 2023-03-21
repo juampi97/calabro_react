@@ -9,14 +9,13 @@ import { Link } from "react-router-dom";
 import Formulario from "./Formulario";
 import ListProducts from "./ListProducts";
 import ResetCarrito from "./ResetCarrito";
-import CompraTerminada from "./CompraTerminada";
 // Import components react-bootstrap
 import Alert from "react-bootstrap/Alert";
 import { Col, Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 
 const Cart = () => {
-  const { cart, totalPrecio, orderId } = useContext(CounterCartContext);
+  const { cart, totalPrecio } = useContext(CounterCartContext);
 
   if (cart.length === 0) {
     return (
@@ -47,10 +46,6 @@ const Cart = () => {
         </Container>
       </>
     );
-  }
-
-  if(orderId!==null){
-    return <CompraTerminada />
   }
 
   return (

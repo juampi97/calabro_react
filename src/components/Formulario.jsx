@@ -13,13 +13,14 @@ import Button from "react-bootstrap/Button";
 import Swal from "sweetalert2";
 
 const Formulario = () => {
-  const { cart, totalPrecio, orderId, setOrderId } =
-    useContext(CounterCartContext);
+  const { cart, totalPrecio, resetCart } = useContext(CounterCartContext);
 
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
   const [emailConfirm, setEmailConfirm] = useState("");
   const [telefono, setTelefono] = useState("");
+  const [orderId, setOrderId] = useState("");
+  const [orderComplete, setOrderComplete] = useState(false);
 
   const db = getFirestore();
 
@@ -54,6 +55,9 @@ const Formulario = () => {
       return;
     } else {
       addDoc(orderCollection, order).then(({ id }) => setOrderId(id));
+      setTimeout(() => {
+        setOrderComplete(true);
+      }, 1000);
     }
   };
 
@@ -84,6 +88,18 @@ const Formulario = () => {
   };
 
   const orderCollection = collection(db, "orders");
+
+  if (orderComplete) {
+    Swal.fire(
+      "Compra realizada con exito",
+      `Su numero de orden es: ${orderId}`,
+      "success"
+    );
+    setTimeout(() => {
+      resetCart();
+      setOrderComplete(false);
+    }, 1000);
+  }
 
   return (
     <>

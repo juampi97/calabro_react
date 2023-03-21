@@ -51,14 +51,9 @@ const CartContext = ( { children } ) => {
     setTotalPrecio(0)
   }
 
-  const compraTerminadaSuccess = () => {
-    setCompraTerminada(true);
-    setCart([]);
-  }
-
 
   return (
-  <CounterCartContext.Provider value={{cart, totalProductos, totalPrecio, compraTerminada, orderId, addItem, removeItem, resetCart, compraTerminadaSuccess, setOrderId}}>{children}</CounterCartContext.Provider>
+  <CounterCartContext.Provider value={{cart, totalProductos, totalPrecio, compraTerminada, orderId, addItem, removeItem, resetCart}}>{children}</CounterCartContext.Provider>
   );
 };
 
