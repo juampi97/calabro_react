@@ -9,9 +9,9 @@ import ItemDetail from "./ItemDetail";
 // Import firebase
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 // Import componenetes react-bootstrap
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Alert from "react-bootstrap/Alert";
 
 const ItemDetailContainer = () => {
@@ -40,16 +40,21 @@ const ItemDetailContainer = () => {
     return <SpinnerLoad />;
   }
 
-  if (errorProducto)
+  if (errorProducto) {
     return (
-      <Container >
-      <Row className="d-flex justify-content-around mt-5">
-        <Col xs={10} md={8} ><Alert key="warning" variant="warning">
-        <h2 className="text-center">Producto no encontrado</h2>
-      </Alert></Col>
-      </Row>
-    </Container>
+      <>
+        <Container>
+          <Row className="d-flex justify-content-around mt-5">
+            <Col xs={10} md={8}>
+              <Alert key="warning" variant="warning">
+                <h2 className="text-center">Producto no encontrado</h2>
+              </Alert>
+            </Col>
+          </Row>
+        </Container>
+      </>
     );
+  }
 
   return (
     <>
