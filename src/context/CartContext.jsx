@@ -8,12 +8,16 @@ const CartContext = ( { children } ) => {
   const [cart, setCart] = useState([]);
   const [totalProductos, setTotalProductos] = useState(0);
   const [totalPrecio, setTotalPrecio] = useState(0);
+  const [compraTerminada, setCompraTerminada] = useState(false);
+  const [orderId, setOrderId] = useState(null);
 
-  const addItem = (cod_rec, cantidad, precio) => {
+  const addItem = (cod_rec, marca, modelo, cantidad, precio) => {
     const position = cart.findIndex((item) => item.cod_rec === cod_rec);
     if (position === -1){
         const item = {
             cod_rec: cod_rec,
+            marca: marca,
+            modelo: modelo,
             cantidad: cantidad,
             precio: precio,
             precioTotal: cantidad * precio
@@ -21,7 +25,6 @@ const CartContext = ( { children } ) => {
         setTotalProductos(totalProductos + cantidad);
         setTotalPrecio(totalPrecio + (cantidad * precio));
         setCart([...cart, item]);
-        
     } else {
         cart[position].cantidad += cantidad;
         setTotalProductos(totalProductos + cantidad);
@@ -48,8 +51,14 @@ const CartContext = ( { children } ) => {
     setTotalPrecio(0)
   }
 
+  const compraTerminadaSuccess = () => {
+    setCompraTerminada(true);
+    setCart([]);
+  }
+
+
   return (
-  <CounterCartContext.Provider value={{cart, totalProductos, totalPrecio, addItem, removeItem, resetCart}}>{children}</CounterCartContext.Provider>
+  <CounterCartContext.Provider value={{cart, totalProductos, totalPrecio, compraTerminada, orderId, addItem, removeItem, resetCart, compraTerminadaSuccess, setOrderId}}>{children}</CounterCartContext.Provider>
   );
 };
 

@@ -28,8 +28,6 @@ const ItemListContainer = () => {
     }
     );
   }, []);
-  console.log(productos);
-
 
   // Filtrado de productos por categoria
   const productosFiltrados = productos.filter(

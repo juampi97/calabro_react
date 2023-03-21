@@ -8,14 +8,19 @@ import SpinnerLoad from "./SpinnerLoad";
 import ItemDetail from "./ItemDetail";
 // Import firebase
 import { doc, getDoc, getFirestore } from "firebase/firestore";
+// Import componenetes react-bootstrap
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Alert from "react-bootstrap/Alert";
 
 const ItemDetailContainer = () => {
   // Obtengo el parametro de la url
   const { id } = useParams();
 
   const [productosLoaded, setProductosLoaded] = useState(false);
-
   const [producto, setProducto] = useState([]);
+  const [errorProducto, setErrorProducto] = useState(false);
 
   useEffect(() => {
     const db = getFirestore();
@@ -25,13 +30,26 @@ const ItemDetailContainer = () => {
         const doc = snapshot.data();
         setProducto(doc);
         setProductosLoaded(true);
+      } else {
+        setErrorProducto(true);
       }
     });
   }, []);
 
-  if (!productosLoaded) {
+  if (!productosLoaded && !errorProducto) {
     return <SpinnerLoad />;
   }
+
+  if (errorProducto)
+    return (
+      <Container >
+      <Row className="d-flex justify-content-around mt-5">
+        <Col xs={10} md={8} ><Alert key="warning" variant="warning">
+        <h2 className="text-center">Producto no encontrado</h2>
+      </Alert></Col>
+      </Row>
+    </Container>
+    );
 
   return (
     <>

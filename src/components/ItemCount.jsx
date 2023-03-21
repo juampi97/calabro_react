@@ -8,10 +8,9 @@ import { useContext } from "react";
 // Import components bootstrap
 import Button from "react-bootstrap/Button";
 
-const ItemCount = ({ stock, precio }) => {
+const ItemCount = ({ cod_rec, marca, modelo, stock, precio }) => {
   const { cart, addItem } = useContext(CounterCartContext);
 
-  const { cod_rec } = useParams();
 
   const cantidadInicial = 1;
 
@@ -59,7 +58,7 @@ const ItemCount = ({ stock, precio }) => {
       </div>
       <div className="pt-2">
         <Button
-          onClick={() => addItem(cod_rec, cantidad, precio)}
+          onClick={() => addItem(cod_rec, marca, modelo, cantidad, precio)}
           className="py-2 p-3"
           variant="warning"
         >

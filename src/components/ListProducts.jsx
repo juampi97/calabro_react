@@ -8,8 +8,8 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import Alert from "react-bootstrap/Alert";
 
-const ListProducts = ({ cod_rec, cantidad, precio }) => {
-  const { totalPrecio, removeItem } = useContext(CounterCartContext);
+const ListProducts = ({ cod_rec, marca, modelo, cantidad, precio }) => {
+  const { removeItem } = useContext(CounterCartContext);
 
   return (
     <>
@@ -18,6 +18,10 @@ const ListProducts = ({ cod_rec, cantidad, precio }) => {
           <ListGroup.Item as="li" className="d-flex align-items-start">
             <div className="col-10 col-lg-11 ms-2">
               <div className="fw-bold">{cod_rec}</div>
+              Marca: {marca}
+              <br />
+              Modelo: {modelo}
+              <br />
               Cantidad: {cantidad}
               <br />
               $/Unidad: ${precio}
