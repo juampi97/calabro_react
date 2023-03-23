@@ -22,8 +22,9 @@ En la sección carrito en caso que el mismo esté vacio nos indicará que no hay
 * [bootstrap-icons](https://icons.getbootstrap.com/)
 * [react-bootstrap](https://react-bootstrap.github.io/)
 * [sweetalert2](https://sweetalert2.github.io/)
+* [firebase](https://firebase.google.com/)
 
-Se utilizaron para dar un formato mas agradable al proyecto. Con Bootstrap le damos una vista agradable y responsive a la aplicación, mientras que a Sweetalert la utilizamos para darle un formato a los alerts. 
+Con Bootstrap le damos una vista agradable y responsive a la aplicación. A Sweetalert la utilizamos para darle un formato a los alerts. Firebase, como ya se menciono, la utilizamos para alojar la base de datos.
 
 ---
 
