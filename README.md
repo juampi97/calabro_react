@@ -24,7 +24,7 @@ En la sección carrito en caso que el mismo esté vacio nos indicará que no hay
 * [sweetalert2](https://sweetalert2.github.io/)
 * [firebase](https://firebase.google.com/)
 
-Con Bootstrap le damos una vista agradable y responsive a la aplicación. A Sweetalert la utilizamos para darle un formato a los alerts. Firebase, como ya se menciono, la utilizamos para alojar la base de datos.
+A Bootstrap se la utilizó para dale una vista agradable y responsive a la aplicación. A Sweetalert la utilizamos para darle un formato a los alerts. Firebase, como ya se menciono, la utilizamos para alojar la base de datos.
 
 ---
 
