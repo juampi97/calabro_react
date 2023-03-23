@@ -1,6 +1,12 @@
 # Proyecto e-comerce
 
-Este es mi proyecto para el curso de React de Coderhouse. Es un ecomerce de venta de productos utlizados para dar exposiciones.
+Este es mi proyecto para el curso de React de Coderhouse.
+
+Es un ecomerce de venta de productos utlizados para dar exposiciones/presentaciones. Los productos se cargan desde una base de datos (firebase), donde los mismos pueden ser filtrados por categoria. 
+
+Se puede acceder a una sección con la descripción personalizada de cada producto, en donde se podrá agregar una determinada cantidad de ese producto al carrito siempre y cuando no supere el stock del indicado en la base de datos.
+
+En la sección carrito en caso que el mismo esté vacio nos indicará que no hay productos y nos dara la opción de ir a la sección de productos. Caso contrario, se podran ver los productos que se agregaron al mismo y nos aparecerá un formulario para concretar la compra. Una vez concretada la compra nos dará un número de orden aleatorio, que también aparecerá en la base de datos con todos los detalles de la compra. 
 
 ---
 
@@ -17,7 +23,7 @@ Este es mi proyecto para el curso de React de Coderhouse. Es un ecomerce de vent
 * [react-bootstrap](https://react-bootstrap.github.io/)
 * [sweetalert2](https://sweetalert2.github.io/)
 
-Se utilizaron para dar un formato mas agradable al proyecto.
+Se utilizaron para dar un formato mas agradable al proyecto. Con Bootstrap le damos una vista agradable y responsive a la aplicación, mientras que a Sweetalert la utilizamos para darle un formato a los alerts. 
 
 ---
 

@@ -21,8 +21,8 @@ const ItemDetail = ({ producto }) => {
       <div className="col-11 col-lg-4 d-flex flex-column align-items-center justify-content-start p-3 border border-2 border-light-subtle rounded-3">
         <h1 className="mt-2 mt-lg-2 mb-2 mb-lg-0 text-center">{producto.modelo}</h1>
         <h4 className="mt-1 mt-lg-3 mb-2 mb-lg-0"> {producto.marca}</h4>
-        <p className="mt-1 mt-lg-3 mb-2 mb-lg-0">Salida HDMI: {producto.salidaHdmi}</p>
-        <p className="mt-1 mt-lg-2 mb-2 mb-lg-2">Salida Vga: {producto.salidaVga}</p>
+        <p className="mt-1 mt-lg-3 mb-2 mb-lg-0">Salida HDMI: {salidaHdmi}</p>
+        <p className="mt-1 mt-lg-2 mb-2 mb-lg-2">Salida Vga: {salidaVga}</p>
         <p className="mt-1 mt-lg-2 mb-2 mb-lg-2">Precio: ${producto.precio}</p>  
         <ItemCount cod_rec={producto.cod_rec} marca={producto.marca} modelo={producto.modelo} stock={producto.stock} precio={producto.precio} />
       </div>

@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "./ItemList";
 import SpinnerLoad from "./SpinnerLoad";
 //Import firebase
-import { collection, doc, getDocs, getFirestore } from "firebase/firestore";
+import { collection, getDocs, getFirestore } from "firebase/firestore";
 
 const ItemListContainer = () => {
 

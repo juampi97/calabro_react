@@ -3,14 +3,12 @@ import React from "react";
 import { CounterCartContext } from "../context/CartContext";
 // Import hook
 import { useState } from "react";
-import { useParams } from "react-router-dom";
 import { useContext } from "react";
 // Import components bootstrap
 import Button from "react-bootstrap/Button";
 
 const ItemCount = ({ cod_rec, marca, modelo, stock, precio }) => {
   const { cart, addItem } = useContext(CounterCartContext);
-
 
   const cantidadInicial = 1;
 

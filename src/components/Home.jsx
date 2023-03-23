@@ -1,5 +1,4 @@
 import React from 'react'
-
 // Importar imagen de fondo
 import fondo from '../assets/fondo_index.jpg'
 

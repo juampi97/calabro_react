@@ -6,7 +6,6 @@ import { CounterCartContext } from "../context/CartContext";
 // Import bootstrap elements
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
-import Alert from "react-bootstrap/Alert";
 
 const ListProducts = ({ cod_rec, marca, modelo, cantidad, precio }) => {
   const { removeItem } = useContext(CounterCartContext);
